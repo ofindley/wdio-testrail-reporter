@@ -81,15 +81,25 @@ node node_modules/wdio-testrail-reporter/scripts/generate-cases.js test-project/
 ```
 will create in test rail:
 - section 'test-group-1'
-- cases that are described in test-1.js inside section 'test-group-1'
+- subsection 'test-1'
+- cases that are described in test-1.js inside subsection 'test-1'
+
 - section 'test-group-2'
 - subsection 'test-sub-group-1' inside section 'test-group-2'
-- cases that are described in test-2.js inside subsection 'test-sub-group-1
-- cases that are described in test-3.js inside subsection 'test-sub-group-1
-- subsection 'test-sub-group-2' inside section 'test-group-2'
-- cases that are described in test-4.js inside subsection 'test-sub-group-2
+- subsection 'test-2' inside subsection 'test-sub-group-1'
+- subsection 'test-3' inside subsection 'test-sub-group-1'
+- cases that are described in test-2.js inside subsection 'test-2'
+- cases that are described in test-3.js inside subsection 'test-3'
 
-also test files (test-1.js - test-4.js) will be updated: id of case will be added to it() function
+- subsection 'test-sub-group-2' inside section 'test-group-2'
+- subsection 'test-4' inside subsection 'test-sub-group-2'
+- cases that are described in test-4.js inside subsection 'test-4'
+
+also test files (test-1.js - test-4.js) will be updated: id of case will be added to test() function
+
+## Furture updates
+- File structure changes as options 
+- it() function / test() function name as options. (default will be it)
 
 ## References
 - https://www.npmjs.com/package/mocha-testrail-reporter

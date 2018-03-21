@@ -6,7 +6,7 @@ Fork from [mocha testrail reporter](https://www.npmjs.com/package/mocha-testrail
 ## Installation
 
 ```shell
-$ npm install wdio-testrail-reporter --save-dev
+$ npm install wdio-testrail-custom-reporter --save-dev
 ```
 
 ## Usage

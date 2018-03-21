@@ -1,37 +1,27 @@
 {
-  "name": "wdio-testrail-reporter",
-  "version": "1.1.5",
-  "description": "A Testrail reporter for webdriver.io including TestRail API basic library (fork from mocha-testrail-reporter)",
-  "main": "lib/wdio-testrail-reporter.js",
-  "private": false,
-  "keywords": [
-    "spec",
-    "testrail",
-    "reporter",
-    "webdriverio",
-    "wdio",
-    "wdio-plugin",
-    "wdio-reporter"
-  ],
-  "author": {
-    "name": "Ivan Levantsov",
-    "email": "ivan.levantsov@oxynade.com"
+  "name": "wdio-testrail-custom-reporter",
+  "version": "1.0.0",
+  "description": "A Testrail reporter for webdriver.io including TestRail API basic library (fork from wdio-testrail-reporter)",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
   },
-  "license": "MIT",
-  "readmeFilename": "README.md",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/oxynade/wdio-testrail-reporter.git"
-  },
-  "bugs": {
-    "url": "https://github.com/oxynade/wdio-testrail-reporter/issues"
+    "url": "git+https://github.com/ofindley/wdio-testrail-reporter.git"
   },
   "dependencies": {
     "file": "^0.2.2",
     "mocha-testrail-reporter": "^1.0.12",
     "sync-request": "^4.1.0"
   },
-  "scripts": {
-    "generate-cases": "node scripts/generate-cases.js"
-  }
+  "author": "Orane Findley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ofindley/wdio-testrail-reporter/issues"
+  },
+  "homepage": "https://github.com/ofindley/wdio-testrail-reporter#readme"
 }

@@ -15,7 +15,7 @@ Ensure that your testrail installation API is enabled and generate your API keys
 Add reporter to wdio.conf.js:
 
 ```Javascript
-let WdioTestRailReporter = require('./packages/wdio-testrail-reporter/lib/wdio-testrail-reporter');
+let WdioTestRailReporter = require('./packages/wdio-testrail-custom-reporter/lib/wdio-testrail-reporter');
 
 ...
 
@@ -34,7 +34,7 @@ let WdioTestRailReporter = require('./packages/wdio-testrail-reporter/lib/wdio-t
 Mark your mocha test names with ID of Testrail test cases. Ensure that your case ids are well distinct from test descriptions.
  
 ```Javascript
-it("C123 C124 Authenticate with invalid user", . . .
+it("C123 Authenticate with invalid user", . . .
 it("Authenticate a valid user C321", . . .
 ```
 
@@ -77,7 +77,7 @@ You have tests structure:
 ```
 Command:
 ```shell
-node node_modules/wdio-testrail-reporter/scripts/generate-cases.js test-project/wdio.conf.js test-project/tests
+node ...node_modules/wdio-testrail-reporter/scripts/generate-cases.js ...test-project/wdio.conf.js ...test-project/tests
 ```
 will create in test rail:
 - section 'test-group-1'
@@ -97,9 +97,14 @@ will create in test rail:
 
 also test files (test-1.js - test-4.js) will be updated: id of case will be added to test() function
 
+If your test function is not 'it' then you can specify your test function name as a third argument
+Command:
+```shell
+node ...node_modules/wdio-testrail-reporter/scripts/generate-cases.js ...test-project/wdio.conf.js ...test-project/tests testFunctionName
+```
+
 ## Furture updates
 - File structure changes as options 
-- it() function / test() function name as options. (default will be it)
 
 ## References
 - https://www.npmjs.com/package/mocha-testrail-reporter

@@ -15,7 +15,7 @@ Ensure that your testrail installation API is enabled and generate your API keys
 Add reporter to wdio.conf.js:
 
 ```Javascript
-let WdioTestRailReporter = require('./packages/wdio-testrail-custom-reporter/lib/wdio-testrail-reporter');
+let WdioTestRailReporter = require('./node_modules/wdio-testrail-custom-reporter/lib/wdio-testrail-reporter');
 
 ...
 
@@ -57,7 +57,7 @@ Only passed or failed tests will be published. Skipped or pending tests will not
 ## Automatic creation of sections and cases
 You can use next command to generate sections/cases based on your tests in test real:
 ```shell
-node scripts/generate-cases.js {path_to_your_wdio.conf} {path_o_your_mail_test_folders}
+node ./node_modules/wdio-testrail-reporter/scripts/generate-cases.js {relative_path_to_your_wdio.conf} {relative_path_to_your_test_folder}
 ```
 Example:
 You have tests structure:
@@ -77,7 +77,7 @@ You have tests structure:
 ```
 Command:
 ```shell
-node ...node_modules/wdio-testrail-reporter/scripts/generate-cases.js ...test-project/wdio.conf.js ...test-project/tests
+node ./node_modules/wdio-testrail-reporter/scripts/generate-cases.js ./wdio.conf.js ./tests
 ```
 will create in test rail:
 - section 'test-group-1'
@@ -100,7 +100,7 @@ also test files (test-1.js - test-4.js) will be updated: id of case will be adde
 If your test function is not 'it' then you can specify your test function name as a third argument
 Command:
 ```shell
-node ...node_modules/wdio-testrail-reporter/scripts/generate-cases.js ...test-project/wdio.conf.js ...test-project/tests testFunctionName
+node ./node_modules/wdio-testrail-reporter/scripts/generate-cases.js ./wdio.conf.js ./tests testFunctionName
 ```
 
 ## Furture updates

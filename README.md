@@ -15,7 +15,7 @@ Ensure that your testrail installation API is enabled and generate your API keys
 Add reporter to wdio.conf.js:
 
 ```Javascript
-let WdioTestRailReporter = require('./node_modules/wdio-testrail-custom-reporter/lib/wdio-testrail-reporter');
+let WdioTestRailReporter = require('wdio-testrail-custom-reporter');
 
 ...
 

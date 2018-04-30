@@ -27,6 +27,7 @@ let WdioTestRailReporter = require('wdio-testrail-custom-reporter');
       projectId: 1,
       suiteId: 1,
       runName: "My test run"
+      includeAllTest: `true`
     }
 ```
 
@@ -53,6 +54,8 @@ Only passed or failed tests will be published. Skipped or pending tests will not
 **suiteId**: *number* suite number with which the tests are associated
 
 **assignedToId**: *number* (optional) user id which will be assigned failed tests
+
+**includeAllTest**: *number* (optional) default true, if false only tests that were ran with show within test run on TestRail
 
 ## Automatic creation of sections and cases
 You can use next command to generate sections/cases based on your tests in test real:

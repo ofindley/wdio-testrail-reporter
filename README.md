@@ -27,7 +27,7 @@ let WdioTestRailReporter = require('wdio-testrail-custom-reporter');
       projectId: 1,
       suiteId: 1,
       runName: "My test run"
-      includeAllTest: `true`
+      includeAllTest: true
     }
 ```
 

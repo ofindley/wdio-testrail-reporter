@@ -1,6 +1,6 @@
 {
   "name": "wdio-testrail-custom-reporter",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A Testrail reporter for webdriver.io including TestRail API basic library (fork from wdio-testrail-reporter)",
   "main": "./lib/wdio-testrail-custom-reporter.js",
   "directories": {

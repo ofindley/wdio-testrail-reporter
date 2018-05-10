@@ -106,8 +106,10 @@ Command:
 node ./node_modules/wdio-testrail-reporter/scripts/generate-cases.js ./wdio.conf.js ./tests testFunctionName
 ```
 
+If your test descriptions ever change just re-run the comman to update the testcase on TestRail.
+
 ## Furture updates
-- File structure changes as options 
+- All recommendations are welcome.
 
 ## References
 - https://www.npmjs.com/package/mocha-testrail-reporter

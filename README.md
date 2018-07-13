@@ -33,7 +33,7 @@ let WdioTestRailReporter = require('wdio-testrail-custom-reporter');
 
 
 Mark your mocha test names with ID of Testrail test cases. Ensure that your case ids are well distinct from test descriptions.
- 
+
 ```Javascript
 it("C123 Authenticate with invalid user", . . .
 it("Authenticate a valid user C321", . . .
@@ -56,6 +56,8 @@ Only passed or failed tests will be published. Skipped or pending tests will not
 **assignedToId**: *number* (optional) user id which will be assigned failed tests
 
 **includeAllTest**: *number* (optional) default true, if false only tests that were ran with show within test run on TestRail
+
+**errorshotHost**: *string* (optional) default null, if provided then screenshot names will be appended to host and included in reports (check [wdio-screenshot-uploader-service](https://www.npmjs.com/package/wdio-screenshot-uploader-service) for more details)
 
 ## Automatic creation of sections and cases
 You can use next command to generate sections/cases based on your tests in test real:
@@ -115,3 +117,4 @@ If your test descriptions ever change just re-run the comman to update the testc
 - https://www.npmjs.com/package/mocha-testrail-reporter
 - http://webdriver.io/guide/reporters/customreporter.html
 - http://docs.gurock.com/testrail-api2/start
+- https://www.npmjs.com/package/wdio-screenshot-uploader-service

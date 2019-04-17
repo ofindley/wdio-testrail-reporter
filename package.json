@@ -14,6 +14,7 @@
 		"url": "git+https://github.com/ofindley/wdio-testrail-reporter.git"
 	},
 	"dependencies": {
+		"@wdio/cli": "^5.7.8",
 		"@wdio/reporter": "^5.7.8",
 		"file": "^0.2.2",
 		"mocha-testrail-reporter": "^1.0.12",
